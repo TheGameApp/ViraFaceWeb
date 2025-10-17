@@ -57,7 +57,9 @@ function RouteComponent() {
 			>
 				<div className="sticky top-0 flex w-full justify-between">
 					<SidebarTrigger />
-					<Button onClick={handleLogout}>Logout</Button>
+					<Button className="m-1 text-sm" size="sm" onClick={handleLogout}>
+						Logout
+					</Button>
 				</div>
 				<Outlet />
 			</SidebarInset>
