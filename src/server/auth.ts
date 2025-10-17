@@ -25,8 +25,6 @@ export const logoutFn = createServerFn().handler(async () => {
 	const supabase = getSupabaseServerClient();
 	const { error } = await supabase.auth.signOut();
 
-	console.log("logout");
-
 	if (error) {
 		return {
 			error: true,

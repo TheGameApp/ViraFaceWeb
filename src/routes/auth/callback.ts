@@ -6,6 +6,7 @@ export const Route = createFileRoute("/auth/callback")({
 		handlers: {
 			GET: async ({ request }) => {
 				const { origin, searchParams } = new URL(request.url);
+				console.log(origin);
 				const code = searchParams.get("code");
 				let next = searchParams.get("next") ?? "/";
 
