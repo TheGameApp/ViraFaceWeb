@@ -21,16 +21,17 @@ export const Route = createFileRoute("/auth/callback")({
 
 						const isLocalEnv = process.env.NODE_ENV === "development";
 						if (isLocalEnv) {
+							console.log(`${origin}${next}`);
 							throw redirect({
-								href: `${origin}${next}`,
+								href: `${origin}${next}dashboard`,
 							});
 						} else if (forwardedHost) {
 							throw redirect({
-								href: `https://${forwardedHost}${next}`,
+								href: `https://${forwardedHost}${next}dashboard`,
 							});
 						} else {
 							throw redirect({
-								href: `${origin}${next}`,
+								href: `${origin}${next}dashboard`,
 							});
 						}
 					}
