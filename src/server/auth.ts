@@ -4,14 +4,13 @@ import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 export const loginFn = createServerFn().handler(async () => {
 	const supabase = getSupabaseServerClient();
-	const isLocalEnv = process.env.NODE_ENV === "development";
+	const _isLocalEnv = process.env.NODE_ENV === "development";
 
 	const { error, data } = await supabase.auth.signInWithOAuth({
 		provider: "google",
 		options: {
-			redirectTo: isLocalEnv
-				? "http://localhost:3000/auth/callback/"
-				: "https://vira-face-web.thegameapp00.workers.dev/auth/callback",
+			redirectTo:
+				"https://vira-face-web.thegameapp00.workers.dev/auth/callback",
 		},
 	});
 
