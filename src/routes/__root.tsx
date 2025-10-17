@@ -5,12 +5,12 @@ import type { QueryClient } from "@tanstack/react-query";
 import {
 	createRootRouteWithContext,
 	HeadContent,
-	Link,
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import type { ReactNode } from "react";
+import { ThemeProvider } from "@/context/theme/theme-provider";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import appCss from "@/styles/app.css?url";
 
@@ -62,34 +62,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
 	return (
-		<RootDocument>
-			<Outlet />
-		</RootDocument>
+		<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+			<RootDocument>
+				<Outlet />
+			</RootDocument>
+		</ThemeProvider>
 	);
 }
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
-	const { user } = Route.useRouteContext();
-
 	return (
 		<html lang="es">
 			<head>
 				<HeadContent />
 			</head>
 			<body>
-				<div className="flex gap-2 p-2 text-lg">
-					<div className="ml-auto">
-						{user ? (
-							<>
-								<span className="mr-2">{user.email}</span>
-								<Link to="/logout">Salir</Link>
-							</>
-						) : (
-							<Link to="/login">Login</Link>
-						)}
-					</div>
-				</div>
-				<hr />
 				{children}
 				<Scripts />
 			</body>
