@@ -3,5 +3,12 @@
   "name": "vira-face-web",
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "@tanstack/react-start/server-entry"
+  "main": "@tanstack/react-start/server-entry",
+  "vars": {
+    "VITE_SUPABASE_URL": "https://cwedfgyzszlzplxjcbkd.supabase.co",
+    "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN3ZWRmZ3l6c3psenBseGpjYmtkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA0MDQ1OTgsImV4cCI6MjA3NTk4MDU5OH0.OZG9f54pmltcbgjW5Gjz23uN454ATwYeB7hlFSN84E8",
+    "VITE_LEMONSQZ_API_KEY": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NGQ1OWNlZi1kYmI4LTRlYTUtYjE3OC1kMjU0MGZjZDY5MTkiLCJqdGkiOiJmNDc2M2IyNjExYjRmMjBiOWE5NWYwNDI2MzQyYjZlZTlhYWYwMjgyZmZlNDRiOTIxOGM4YjA5MWUwNjQ5ZGRjNjc0NTdkMWM3MmQ2NDRjYSIsImlhdCI6MTc2MTYwMzk4My4xNTEyNTksIm5iZiI6MTc2MTYwMzk4My4xNTEyNjEsImV4cCI6MjA3NzEzNjc4My4xMzM3OTMsInN1YiI6IjQ5MjE4NTkiLCJzY29wZXMiOltdfQ.viBkSvMZ2AZTjlqVg4UrWW5bTT_tCtH4-nyI5vgOfKuB7SIPN58b1UJaJas6RqzFIkTJbiBXa6yLU4lYW_4Gcos1soBsG0EjLMZTA1AUNS-SlJDqzaL2nq9MgabYiM9BnhEs3hBC4xcKoZZyKywZa84zXJ4qnRl0qr0QxIWWp5c3Vahn6jj11-3de-Gqs1a0rbpJ5er9XTO1vHrb8TuyiXudMat4wW4rgE22TaDl4HYiE7-zAk78b8tGc1v1GUfFJsO_aYYBwCiNVs5tkgTeNu3Fzw6xr4lwbWNE7hWTMTgNxX1ICzLKtVmEWa8yuCH3Qh9vGJgEadOLTNur8MIyyq381GDh_7FuxmmqQ9yJrEyg7nA3WLIpZ4Egwz5Kr96r38iIb-R_YvIFQ-O6LenymhWKg-DKn4ZT6zaYro6rUz9I4aKJeAEefdj1l2L66ZmE96sIuQxavuee3srGo5QiaN5bYl8Xr-Doau3Ks_MHnGVcqxpFXvn5GN_sYTUepxQkUxPOI_BB6BkJE_tuziAVzxz2BEioA1auIfSjEY7pSGYwnYjNzMixYS7VBrXUOk4A8Z4jzGiGvWwtze5aSSKIlVkbIRYrF8b57iw3L2-afw5h7MKG1aTMrghYyMHFfxk6-Fo30zIg_NYNEQcNxddNFs1YAGq1anMuZQEvlvfP_mc",
+    "VITE_LEMONSQZ_PRODUCT_STARTUP": "674961",
+    "VITE_LEMONSQZ_PRODUCT_SCALE": "674970"
+  }
 }
